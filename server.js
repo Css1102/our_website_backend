@@ -9,7 +9,7 @@ dotenv.config()
 const { Pool } = pkg;
 const app = express();
 app.use(cors({
-allowedOrigins:['file:///Users/chiranjeev/Downloads/Nova-Bootstrap5_beta1-1.0.0/index.html','https://694fa4b4fa81b7375a9b652e--prismatic-dieffenbachia-761757.netlify.app/#feature']
+origin:['https://694fa4b4fa81b7375a9b652e--prismatic-dieffenbachia-761757.netlify.app/#feature']
 }))
 const port = process.env.PORT||5000;
 
@@ -36,7 +36,7 @@ console.log(result.rows);
 // Route to handle form POST
 app.post('/', async (req, res) => {
   const { name, email,number, subject,message } = req.body;
-  const str_number=toString(number)
+  const str_number=String(number)
   try {
     await pool.query(
       "INSERT INTO users (name,email, phone, subject, message) VALUES ($1,$2,$3,$4,$5)",
