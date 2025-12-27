@@ -9,7 +9,7 @@ dotenv.config()
 const { Pool } = pkg;
 const app = express();
 app.use(cors({
-allowedOrigins:['file:///Users/chiranjeev/Downloads/Nova-Bootstrap5_beta1-1.0.0/index.html']
+allowedOrigins:['file:///Users/chiranjeev/Downloads/Nova-Bootstrap5_beta1-1.0.0/index.html','https://694fa4b4fa81b7375a9b652e--prismatic-dieffenbachia-761757.netlify.app/#feature']
 }))
 const port = process.env.PORT||5000;
 
